@@ -1,0 +1,65 @@
+23:54:48 **** Incremental Build of configuration Release for project FINAL ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:24:
+../Core/Inc/MCP2515.h:9: warning: ignoring '#pragma anon_unions ' [-Wunknown-pragmas]
+    9 | #pragma anon_unions
+      | 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:156:12: warning: unused variable 'lin_vel' [-Wunused-variable]
+  156 |   int RPM, lin_vel=0;
+      |            ^~~~~~~
+../Core/Src/main.c:156:7: warning: unused variable 'RPM' [-Wunused-variable]
+  156 |   int RPM, lin_vel=0;
+      |       ^~~
+../Core/Src/main.c:155:11: warning: unused variable 'heatsink_temp1' [-Wunused-variable]
+  155 |   uint8_t heatsink_temp1;
+      |           ^~~~~~~~~~~~~~
+../Core/Src/main.c:154:106: warning: unused variable 'throttle_input_vol1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                                                                                          ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:154:91: warning: unused variable 'torque_demand1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                                                                           ^~~~~~~~~~~~~~
+../Core/Src/main.c:154:80: warning: unused variable 'batt_curr1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                                                                ^~~~~~~~~~
+../Core/Src/main.c:154:70: warning: unused variable 'batt_vol1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                                                      ^~~~~~~~~
+../Core/Src/main.c:154:57: warning: unused variable 'motor_curr1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                                         ^~~~~~~~~~~
+../Core/Src/main.c:154:46: warning: unused variable 'motor_vol1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                              ^~~~~~~~~~
+../Core/Src/main.c:154:36: warning: unused variable 'temp_buff' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                                    ^~~~~~~~~
+../Core/Src/main.c:154:24: warning: unused variable 'torque_buff' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                        ^~~~~~~~~~~
+../Core/Src/main.c:154:18: warning: unused variable 'RPM_2' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |                  ^~~~~
+../Core/Src/main.c:154:12: warning: unused variable 'RPM_1' [-Wunused-variable]
+  154 |   uint16_t RPM_1,RPM_2,torque_buff,temp_buff,motor_vol1,motor_curr1, batt_vol1,batt_curr1,torque_demand1,throttle_input_vol1;
+      |            ^~~~~
+arm-none-eabi-gcc -o "FINAL.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\rlarlarlathgus\Desktop\fourtor_ECU-final\FINAL\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: FINAL.elf
+ 
+arm-none-eabi-size   FINAL.elf 
+arm-none-eabi-objdump -h -S  FINAL.elf  > "FINAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  16884	    120	   2152	  19156	   4ad4	FINAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: FINAL.list
+ 
+23:54:59 **** Incremental Build of configuration Release for project FINAL ****
+make -j8 all 
+arm-none-eabi-size   FINAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16884	    120	   2152	  19156	   4ad4	FINAL.elf
+Finished building: default.size.stdout
+ 

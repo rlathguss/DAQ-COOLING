@@ -1,0 +1,10 @@
+Drivers/
+Debug/
+.settings/
+.cproject
+.mxproject
+.project
+*.launch
+*.ld
+.DS_Store
+Core/Startup/
